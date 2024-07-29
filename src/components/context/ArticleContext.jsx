@@ -4,6 +4,7 @@ export const ArticleContext = createContext()
 
 export const articlesReducer = (state, action) => {
     switch (action.type) {
+        // case is what gets called on the type
         case "GET_ARTICLES": {
             return {
                 articles: action.payload

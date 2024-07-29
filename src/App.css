@@ -1,13 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,500;1,800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
-header {
-  padding: 30px;
-  background-color: #404040;
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0px;
+}
+
+body.no-scroll {
+  overflow-y: hidden;
+}
+
+label {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  color: rgb(159, 8, 8);
+  margin-bottom: 20px;
+  font-weight: 100;
+}
+
+/* nav */
+#topnav {
+  background: #1f1f1f;
+  display: flex;
+  padding: 20px;
+}
+
+#menu {
+  width: 75%;
+  padding-right: 30px;
+}
+
+#menu-button {
+  float: right;
+}
+
+#topnav {
+  text-align: right;
+}
+
+#topnav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+#topnav #logo {
+    width: 25%;
+    font-weight: 600;
+    font-size: 28px;
+    margin-right: 30px;
+    text-align: left;
+}
+
+#button-container {
+  width: 50%;
+}
+
+/* buttons */
+button {
+  background: none;
+  border: none;
+  display: block;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#hamburger-icon {
+  color: white;
+  font-size: 33px;
+  position: relative;
+  top: 2px;
+}
+
+#mobile-menu {
+  width: 100%;
+  height: 100%;
+  background-color: #1f1f1f;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding-top: 25%;
+}
+
+#mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+#close-nav-menu {
+  z-index: 2;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  font-size: 53px;
+  color: white;
+}
+
+#menu {
+  display: none;
+}
+
+#menu-container {
+  width: 100%;
+}
+
+#topnav a:hover {
+  color: #8797e5;
+}
+
+#menu a:hover {
   color: white;
 }
 
@@ -16,7 +148,7 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 30px;
-  background-color: #404040;
+  background-color: #5b2ed6;
   color: white;
 }
 
@@ -41,9 +173,23 @@ footer {
 }
 
 .article {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   padding: 10px;
   border-right: 1px solid black;
+}
+
+/* Media queries */
+@media screen and (min-width: 780px) {
+  h1 {
+    font-size: 60px;
+  }
+  #menu {
+    display: block;
+    width: 75%;
+  }
+  #menu li {
+    display: inline-block;
+  }
+  #menu-container {
+    display: none;
+  }
 }
